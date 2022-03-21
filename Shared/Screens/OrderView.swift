@@ -20,13 +20,17 @@ struct OrderView: View {
                     }
                 }
                 Section {
-                    NavigationLink(destination: Text("Check Out")) {
+                    NavigationLink(destination: CheckoutView()) {
                         Text("Place Order")
                     }
                 }
             }
             .navigationTitle("Order")
+            #if os(iOS)
             .listStyle(InsetGroupedListStyle())
+            #else
+            .listStyle(.inset)
+            #endif
         }
     }
 }
