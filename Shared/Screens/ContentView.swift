@@ -26,7 +26,11 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Menu")
+            #if os(iOS)
             .listStyle(GroupedListStyle())
+            #else
+            .listStyle(.inset(alternatesRowBackgrounds: true))
+            #endif
         }
     }
 

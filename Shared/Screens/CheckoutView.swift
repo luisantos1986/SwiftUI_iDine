@@ -17,17 +17,41 @@ struct CheckoutView: View {
     @EnvironmentObject var order: Order
     
     @State private var paymentType: PaymentTypes = .cash
+    @State private var addLoyaltyDetails = false
+    @State private var loyaltyNumber = ""
+    @State private var tipAmount = 15
     
     var body: some View {
-        VStack {
+        Form {
             Section {
                 Picker("How do you want to pay", selection: $paymentType) {
                     ForEach(PaymentTypes.allCases, id:\.self) {
                         Text($0.rawValue)
                     }
                 }
+                Toggle("Add iDine loyalty Card", isOn: $addLoyaltyDetails.animation())
+                if addLoyaltyDetails {
+                    TextField("Enter your iDine id", text: $loyaltyNumber)
+                }
+            }
+            Section(header: Text("Add tip")) {
+                Picker("Percentage", selection: $tipAmount) {
+                    ForEach(createTips(x: 5), id:\.self) {
+                        Text("\($0)")
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+            }
+            Section(header: Text("TOTAL: $100")) {
+                Button("Confirm order") {
+                    // place the order
+                }
             }
         }
+    }
+    
+    func createTips(x: Int) -> [Int] {
+        return (0...x).map { return $0 * 5 }
     }
 }
 

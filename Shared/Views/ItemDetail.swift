@@ -32,7 +32,9 @@ struct ItemDetail: View {
             Spacer()
         }
         .navigationTitle(item.name)
+        #if os(iOS)
         .navigationBarTitleDisplayMode(.inline)
+        #endif
     }
 }
 
