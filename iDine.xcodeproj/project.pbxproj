@@ -37,6 +37,8 @@
 		8740945F27E81737003A5368 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740945127E81737003A5368 /* Menu.swift */; };
 		8740946027E81737003A5368 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740945327E81737003A5368 /* Helper.swift */; };
 		8740946127E81737003A5368 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740945327E81737003A5368 /* Helper.swift */; };
+		8740946427E82755003A5368 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740946327E82755003A5368 /* CheckoutView.swift */; };
+		8740946527E82755003A5368 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8740946327E82755003A5368 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,7 @@
 		8740945027E81737003A5368 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		8740945127E81737003A5368 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		8740945327E81737003A5368 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		8740946327E82755003A5368 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +130,12 @@
 		874093F027E81619003A5368 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				8740946227E8272F003A5368 /* Screens */,
 				8740944F27E81737003A5368 /* DataModels */,
 				8740945227E81737003A5368 /* Helpers */,
 				8740944927E81737003A5368 /* MockedData */,
 				8740944B27E81737003A5368 /* Views */,
 				874093F327E81619003A5368 /* iDineApp.swift */,
-				8740944227E81666003A5368 /* ContentView.swift */,
 				8740944027E81666003A5368 /* MainView.swift */,
 				8740944127E81666003A5368 /* Persistence.swift */,
 				874093F627E8161C003A5368 /* Assets.xcassets */,
@@ -191,7 +194,6 @@
 			children = (
 				8740944C27E81737003A5368 /* ItemRow.swift */,
 				8740944D27E81737003A5368 /* ItemDetail.swift */,
-				8740944E27E81737003A5368 /* OrderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +213,16 @@
 				8740945327E81737003A5368 /* Helper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8740946227E8272F003A5368 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8740944E27E81737003A5368 /* OrderView.swift */,
+				8740944227E81666003A5368 /* ContentView.swift */,
+				8740946327E82755003A5368 /* CheckoutView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +387,7 @@
 			files = (
 				8740946027E81737003A5368 /* Helper.swift in Sources */,
 				8740945827E81737003A5368 /* ItemDetail.swift in Sources */,
+				8740946427E82755003A5368 /* CheckoutView.swift in Sources */,
 				8740945A27E81737003A5368 /* OrderView.swift in Sources */,
 				8740941C27E8161C003A5368 /* iDine.xcdatamodeld in Sources */,
 				8740945C27E81737003A5368 /* Order.swift in Sources */,
@@ -393,6 +406,7 @@
 			files = (
 				8740946127E81737003A5368 /* Helper.swift in Sources */,
 				8740945927E81737003A5368 /* ItemDetail.swift in Sources */,
+				8740946527E82755003A5368 /* CheckoutView.swift in Sources */,
 				8740945B27E81737003A5368 /* OrderView.swift in Sources */,
 				8740941D27E8161C003A5368 /* iDine.xcdatamodeld in Sources */,
 				8740945D27E81737003A5368 /* Order.swift in Sources */,
